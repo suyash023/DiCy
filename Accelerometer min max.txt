@@ -1,0 +1,26 @@
+void setup()
+{
+  pinMode(A0,INPUT);
+  Serial.begin(9600);
+}
+int minimum=500;
+int  maximum=0;
+
+void loop()
+{
+  Serial.print("X axis: ");
+  Serial.println(analogRead(A0));
+  
+   if(analogRead(A0)<minimum)
+   {
+     minimum=analogRead(A0);
+   }
+   if(analogRead(A0)>maximum)
+   {
+     maximum=analogRead(A0);
+   }
+   Serial.print("Max: ");
+   Serial.println(maximum);
+   Serial.print("Min: ");
+   Serial.println(minimum);
+}

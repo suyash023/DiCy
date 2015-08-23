@@ -1,0 +1,22 @@
+int m1=5;
+int m2=9;
+int m3=6;
+int m4=10;
+
+void setup()
+{
+  pinMode(m1,OUTPUT);
+  pinMode(m2,OUTPUT);
+  pinMode(m3,OUTPUT);
+  pinMode(m4,OUTPUT);
+  pinMode(3,OUTPUT);
+  digitalWrite(3,HIGH);
+}
+
+void loop()
+{
+  analogWrite(m1,200);
+  analogWrite(m2,0);
+  analogWrite(m3,200); //forward
+  analogWrite(m4,0);
+}
